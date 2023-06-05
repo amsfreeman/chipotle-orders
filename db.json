@@ -1,0 +1,44 @@
+{
+    "nameOfTaco": [
+      {
+        "id": 1,
+        "name": "Chicken",
+        "image": "https://www.macheesmo.com/wp-content/uploads/2011/03/Chipotle-Chicken-Tacos-2016x1400.webp",
+        "rating": 7,
+        "comment": "Yummy, a classic!",
+        "likes": 6
+      },
+      {
+        "id": 2,
+        "name": "Steak",
+        "image": "https://www.cookingclassy.com/wp-content/uploads/2022/06/steak-tacos-19.jpg",
+        "rating": 10,
+        "comment": "Chipotle's best option!",
+        "likes": 4
+      },
+      {
+        "id": 3,
+        "name": "Barbacoa",
+        "image": "https://www.chilipeppermadness.com/wp-content/uploads/2022/11/Barbacoa-Tacos-Recipe1.jpg",
+        "rating": 7,
+        "comment": "Worth the wait.",
+        "likes": 8
+      },
+      {
+        "id": 4,
+        "name": "Veggie",
+        "image": "https://www.ambitiouskitchen.com/wp-content/uploads/2022/02/Sheet-Pan-Roasted-Veggie-Tacos-4-1064x1064.jpg",
+        "rating": 8,
+        "comment": "Healthy and delicious.",
+        "likes": 5
+      },
+      {
+        "id": 5,
+        "name": "Carnitas",
+        "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/04/Carnitas-Tacos-3.jpg",
+        "rating": 6,
+        "comment": "Not the best, but still good.",
+        "likes": 2
+      }
+    ]
+  }
