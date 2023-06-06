@@ -79,8 +79,8 @@ function displayAlertMostLiked() {
     alert("Most liked taco is Carnitas! Go Carnitas!")
 }
 
-ameliaFave.addEventListener("mouseover", displayAlertAmelia);
-jessicaFave.addEventListener("mouseover", displayAlertJessica);
-mikeFave.addEventListener("mouseover", displayAlertMike);
-leastLiked.addEventListener("mouseover", displayAlertLeastLiked);
-mostLiked.addEventListener("mouseover", displayAlertMostLiked);
+ameliaFave.addEventListener("mouseup", displayAlertAmelia);
+jessicaFave.addEventListener("mouseup", displayAlertJessica);
+mikeFave.addEventListener("mouseup", displayAlertMike);
+leastLiked.addEventListener("mouseup", displayAlertLeastLiked);
+mostLiked.addEventListener("mouseup", displayAlertMostLiked);
