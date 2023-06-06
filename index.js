@@ -1,35 +1,86 @@
-//const tacoImage = document.createElement('img')
-const tacoUrl = "http://localhost:3000/nameOfTaco";
-const tacoMenu = document.getElementById('taco-menu')
+const tacoUrl = 'http://localhost:3000/nameOfTaco';
+
+const theForm = document.getElementById("new-taco");
+const ameliaFave = document.getElementById("amelia-fave");
+const jessicaFave = document.getElementById("jessica-fave");
+const mikeFave = document.getElementById("mike-fave");
+const leastLiked = document.getElementById("least-liked");
+const mostLiked = document.getElementById("most-liked");
 
 fetch(tacoUrl)
     .then(r => r.json())
-    .then(allTacoInfo  => {
-        renderTopGroup(allTacoInfo)
+    .then(allTacoInfo => {
+        allTacos(allTacoInfo)
     })
 
-function renderTopGroup(arrayOfTacos) {
-    arrayOfTacos.forEach((tacoObject) => {
-        const tacoImage = document.createElement('img')
-        tacoImage.src = tacoObject.image
-        tacoMenu.append(tacoImage)   
-    })
+function allTacos(arrayOfAllTacos) {
+    arrayOfAllTacos.forEach(tacoObject => {
+        renderAllDetails(tacoObject)
+})}
+
+function renderAllDetails(oneTacoObject) {
+        const tacoInfo = document.getElementById("all-taco-info")
+        const tacoName = document.createElement("h2")
+        const tacoImage = document.createElement("img")
+        const tacoRating = document.createElement("p")
+        const tacoComment = document.createElement("p")
+        const numberOfExistingLikes = document.createElement("p")
+        const likeBtn = document.createElement("button")
+
+        tacoName.textContent = oneTacoObject.name
+        tacoImage.src = oneTacoObject.image
+        tacoImage.alt = oneTacoObject.name
+        tacoRating.textContent = `Rating: ${oneTacoObject.rating}`
+        tacoComment.textContent = `Comment: ${oneTacoObject.comment}`
+        numberOfExistingLikes.textContent = `${oneTacoObject.likes} Likes`
+        likeBtn.textContent = "I like this!"
+
+        
+        tacoInfo.append(tacoName, tacoImage, tacoRating, tacoComment, numberOfExistingLikes, likeBtn)     
+
+        likeBtn.addEventListener('click', (event) => {
+            oneTacoObject.likes = oneTacoObject.likes + 1;
+            numberOfExistingLikes.textContent = `${oneTacoObject.likes} Likes`
+        })
+    }
+
+theForm.addEventListener('submit', (event) => {
+        event.preventDefault() 
+        const newTaco = {
+            name: event.target.name.value,
+            image: event.target.image.value,
+            rating: event.target.rating.value,
+            comment: event.target.comment.value,
+            likes: 0
+        }
+        renderAllDetails(newTaco)
+        const form = theForm;
+        form.reset();
+    }
+    )
+
+function displayAlertAmelia() {
+    alert("Amelia's favorite is taco bell beef tacos. Weird.")
 }
-    
-        // tacoImage.addEventListener('click', () => {
-        //     const nameOfTaco = document.getElementById('taco-detail')
-        //     nameOfTaco.textContent = tacoObject.name;
-        //     console.log(nameOfTaco)
-            
-            // tacoMenu(tacoObject)
-            // console.log(tacoObject) 
 
-        //tacoImage.addEventListener()
-    
+function displayAlertJessica() {
+    alert("Jessica's favorite is Carnitas. Cool!")
+}
 
-// function tacoImageEventListener() {
-//     tacoImage.addEventListener('click', () => {
-//         tacoMenu(tacoObject)
-//         console.log(tacoObject)
-//     })
-// }
+function displayAlertMike() {
+    alert("Mike's favorite is fish tacos. Awesome!")
+}
+
+function displayAlertLeastLiked() {
+    alert("Least liked is steak tacos. Okay then.")
+}
+
+function displayAlertMostLiked() {
+    alert("Most liked taco is Carnitas! Go Carnitas!")
+}
+
+ameliaFave.addEventListener("mouseover", displayAlertAmelia);
+jessicaFave.addEventListener("mouseover", displayAlertJessica);
+mikeFave.addEventListener("mouseover", displayAlertMike);
+leastLiked.addEventListener("mouseover", displayAlertLeastLiked);
+mostLiked.addEventListener("mouseover", displayAlertMostLiked);

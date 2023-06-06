@@ -1,35 +1,85 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Chipotle Taco Mania</title>
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
-    <script defer type="text/javascript" src="index.js"></script>
-</head>
-<body>
-    <header>
-       <h2>Chipotle Taco Mania</h2>
-    </header>
+<html lang="en">
+    <head>
+        <title>
+            Best Tacos
+        </title>
+        <script type="text/javascript" defer src="./index.js"></script>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
 
-    <div id="taco-menu">
-      </div>
-    
-      <div id="taco-detail">
-        <!--<img class="detail-image" src="./assets/image-placeholder.jpg" alt="Insert Name Here" >-->
-        <h2 class="name">Insert Name Here</h2>
-      </div>
-    
-      <h3>Rating:</h3>
-      <p>
-        <span id='rating-display'>Insert rating here</span> / 10
-      </p>
-      <h3>Comment:</h3>
-      <p id='comment-display'>
-        Insert comment here
-      </p>
+    <body>
+        <h1>
+            Best Tacos Out There!
+        </h1>
+        <!--HELP with trying to get something from this nav-->
+         <nav>
+            <ul id="taco-nav-unordered-list">
+                <!--The a tag is WRONG, FIX-->
+                <li><a href="#potato" id="amelia-fave">Amelia's Favorite</a></li>
+                <li><a id="jessica-fave">Jessica's Favorite</a></li>
+                <li><a id="mike-fave">Mike's Favorite</a></li>
+                <li><a id="least-liked">Least Liked</a></li>
+                <li><a id="most-liked">Most Liked</a></li>
+            </ul>
+        </nav>
 
-      <p>
-        <h4>Likes</h4>
-      </p>
+        <div id="all-taco-info">
+        </div>
 
-   </body>
+        <div class="container">
+            <form id="new-taco">
+                <h2>Add Your Own Favorite Taco</h2>
+                <input 
+                    id="nameNewTaco"
+                    type="text"
+                    name="name"
+                    value=""
+                    placeholder="Name of New Taco"
+                />
+                <!--BAD!!!-->
+                <br />
+                <br />
+
+                <input 
+                    id="imageNewTaco"
+                    type="text"
+                    name="image"
+                    value=""
+                    placeholder="Image of New Taco"
+                />
+                <br />
+                <br />
+
+                <input
+                    id="ratingNewTaco"
+                    type="text"
+                    name="rating"
+                    value=""
+                    placeholder="Rating of New Taco"
+                />
+                <br />
+                <br />
+
+                <input 
+                    id="commentNewTaco"
+                    type="text"
+                    name="comment"
+                    value=""
+                    placeholder="Comment on New Taco"
+                />
+                <br />
+                <br />
+
+                <input
+                    type="submit"
+                    value="submit"
+                />
+            </form>
+
+            <div id="potato">
+                
+            </div>
+        </div>
+    </body>
 </html>
