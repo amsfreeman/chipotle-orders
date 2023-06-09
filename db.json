@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Chicken",
-      "image": "https://www.macheesmo.com/wp-content/uploads/2011/03/Chipotle-Chicken-Tacos-2016x1400.webp",
+      "image": "https://www.macheesmo.com/wp-content/uploads/2011/03/Chipotle-Chicken-Tacos.jpg",
       "rating": 7,
       "comment": "A yummy classic!",
       "likes": 6
@@ -13,7 +13,7 @@
       "name": "Steak",
       "image": "https://www.cookingclassy.com/wp-content/uploads/2022/06/steak-tacos-19.jpg",
       "rating": 10,
-      "comment": "Chipotle's best option!",
+      "comment": "Great option!",
       "likes": 4
     },
     {

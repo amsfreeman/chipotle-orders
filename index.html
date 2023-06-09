@@ -24,19 +24,24 @@
         </nav>
 
         <div>
-          <h2>Listen to a Mariachi Band While Reading about Tacos</h2>
+          <h2 id="mariachi-music">Listen to a Mariachi Band While Reading about Tacos</h2>
           <audio controls>
-            <source src="./assests/mariachi.mp3" type="audio/mpeg">
+            <source src="./assets/mariachi.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
           </audio>
         </div>
 
+        <div>
+            <h2 id=taco-liking>Vote on Your Favorite Taco</h2>
+
+        </div>
+    
         <div id="all-taco-info">
         </div>
 
         <div class="container">
             <form id="new-taco">
-                <h2>Add Your Own Favorite Taco</h2>
+                <h2>Add Your Own Favorite Taco!</h2>
                 <input 
                     id="nameNewTaco"
                     type="text"
@@ -44,9 +49,6 @@
                     value=""
                     placeholder="Name of New Taco"
                 />
-                <!--BAD!!!-->
-                <br />
-                <br />
 
                 <input 
                     id="imageNewTaco"
@@ -55,8 +57,6 @@
                     value=""
                     placeholder="Image of New Taco"
                 />
-                <br />
-                <br />
 
                 <input
                     id="ratingNewTaco"
@@ -65,8 +65,6 @@
                     value=""
                     placeholder="Rating of New Taco"
                 />
-                <br />
-                <br />
 
                 <input 
                     id="commentNewTaco"
@@ -75,18 +73,13 @@
                     value=""
                     placeholder="Comment on New Taco"
                 />
-                <br />
-                <br />
 
-                <input
+                <input id="submit"
                     type="submit"
                     value="submit"
                 />
             </form>
 
-            <div id="potato">
-                
-            </div>
         </div>
     </body>
 </html>

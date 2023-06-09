@@ -1,6 +1,9 @@
 h1 {
     text-align: center;
-    color: #077fcf
+    color: #548687;
+    background-color: #FFFFC7;
+    border-radius: 25px;
+
 }
 
 nav {
@@ -9,6 +12,8 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
+    cursor: pointer;
+    border-radius: 25px;
 }
 
 nav ul {
@@ -28,15 +33,102 @@ nav p {
     display: block;
     padding: 15px;
     text-decoration: none;
-    color: #c92649;
+    color: white;
 }
 
-nav a:hover {
-    background-color: black;
+nav #amelia-fave:hover {
+    background-color: #5faf7a;
+    border-radius: 25px;
+}
+
+nav #jessica-fave:hover {
+    background-color: #131212;
+    border-radius: 25px;
+}
+
+nav #mike-fave:hover {
+    background-color: #dde40a;
+    border-radius: 25px;
+}
+
+nav #least-liked:hover {
+    background-color: #7983e4;
+    border-radius: 25px;
+}
+
+nav #most-liked:hover {
+    background-color: #9f3ca1;
+    border-radius: 25px;
 }
 
 img {
+    margin: auto;
+    display: block;
     width: 100px;
     height: 100px;
 }
 
+div #mariachi-music {
+    background-color: #FFFFC7;
+    color: #548687;
+    text-align: center;
+}
+
+input {
+    margin: 10px;
+}
+
+#submit {
+    margin: 10px;
+}
+
+.taco-container {
+    border-style: solid;
+    border-color: #395c39;
+    border-width: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    text-align: center;
+    height: 25rem;
+    width: 15rem;
+    display: inline-grid;
+}
+
+.container {
+    border-style: solid;
+    border-color: #395c39;
+    border-width: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    height: 20rem;
+    width: 15rem; 
+}
+
+h2 {
+    color: #548687;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    border-radius: 25px;
+}
+
+body {
+    background-color: #FCAA67;
+}
+
+#all-taco-info p {
+    color: #548687;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    border-radius: 15px;
+}
+
+#taco-liking {
+    background-color: #FFFFC7;
+    color: #548687;
+    text-align: center;
+}

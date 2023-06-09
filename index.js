@@ -20,12 +20,15 @@ function allTacos(arrayOfAllTacos) {
 
 function renderAllDetails(oneTacoObject) {
         const tacoInfo = document.getElementById("all-taco-info")
+        const tacoContainer = document.createElement('div')
         const tacoName = document.createElement("h2")
         const tacoImage = document.createElement("img")
         const tacoRating = document.createElement("p")
         const tacoComment = document.createElement("p")
         const numberOfExistingLikes = document.createElement("p")
         const likeBtn = document.createElement("button")
+
+        tacoContainer.className = "taco-container"
 
         tacoName.textContent = oneTacoObject.name
         tacoImage.src = oneTacoObject.image
@@ -34,11 +37,11 @@ function renderAllDetails(oneTacoObject) {
         tacoComment.textContent = `Comment: ${oneTacoObject.comment}`
         numberOfExistingLikes.textContent = `${oneTacoObject.likes} Likes`
         likeBtn.textContent = "I like this!"
-
         
-        tacoInfo.append(tacoName, tacoImage, tacoRating, tacoComment, numberOfExistingLikes, likeBtn)     
+        tacoContainer.append(tacoName, tacoImage, tacoRating, tacoComment, numberOfExistingLikes, likeBtn)     
+        tacoInfo.append(tacoContainer)
 
-        likeBtn.addEventListener('click', (event) => {
+        likeBtn.addEventListener('click', () => {
             oneTacoObject.likes = oneTacoObject.likes + 1;
             numberOfExistingLikes.textContent = `${oneTacoObject.likes} Likes`
         })
@@ -59,28 +62,20 @@ theForm.addEventListener('submit', (event) => {
     }
     )
 
-function displayAlertAmelia() {
-    alert("Amelia's favorite is taco bell beef tacos. Weird.")
-}
+ameliaFave.addEventListener("mouseup", () => {
+    alert("Amelia's favorite is taco bell beef tacos. Weird.") 
+});
 
-function displayAlertJessica() {
-    alert("Jessica's favorite is Carnitas. Cool!")
-}
+jessicaFave.addEventListener("mouseup", ()  => {
+    alert("Jessica's favorite is Steak tacos. Cool!")
+});
 
-function displayAlertMike() {
-    alert("Mike's favorite is fish tacos. Awesome!")
-}
-
-function displayAlertLeastLiked() {
+mikeFave.addEventListener("mouseup", () => {
+    alert("Mike's favorite is fish tacos. Awesome!") 
+});
+leastLiked.addEventListener("mouseup", () => {
     alert("Least liked is steak tacos. Okay then.")
-}
-
-function displayAlertMostLiked() {
+});
+mostLiked.addEventListener("mouseup", () => {
     alert("Most liked taco is Carnitas! Go Carnitas!")
-}
-
-ameliaFave.addEventListener("mouseup", displayAlertAmelia);
-jessicaFave.addEventListener("mouseup", displayAlertJessica);
-mikeFave.addEventListener("mouseup", displayAlertMike);
-leastLiked.addEventListener("mouseup", displayAlertLeastLiked);
-mostLiked.addEventListener("mouseup", displayAlertMostLiked);
+});
